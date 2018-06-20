@@ -1,53 +1,38 @@
 {
-  "name": "postcss-media-prefers-interface",
+  "name": "media-prefers-interface",
   "version": "1.0.0",
-  "description": "",
+  "description": "Use “dark mode” media queries in CSS",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "license": "CC0-1.0",
-  "repository": "jonathantneal/postcss-media-prefers-interface",
-  "homepage": "https://github.com/jonathantneal/postcss-media-prefers-interface#readme",
-  "bugs": "https://github.com/jonathantneal/postcss-media-prefers-interface/issues",
-  "main": "index.cjs.js",
-  "module": "index.es.js",
+  "repository": "csstools/media-prefers-interface",
+  "homepage": "https://github.com/csstools/media-prefers-interface#readme",
+  "bugs": "https://github.com/csstools/media-prefers-interface/issues",
+  "main": "index.iife.js",
   "files": [
-    "index.cjs.js",
-    "index.es.js",
-    ".*",
-    "*"
+    "index.iife.js"
   ],
   "scripts": {
+    "build:iife": "babel index.js | uglifyjs --compress --mangle --output index.iife.js; gzip-size index.iife.js",
     "prepublishOnly": "npm test",
-    "pretest": "rollup -c .rollup.js --silent",
-    "test": "echo 'Running tests...'; npm run test:js && npm run test:tape",
-    "test:ec": "echint --ignore index.*.js test",
-    "test:js": "eslint *.js --cache --ignore-path .gitignore --quiet",
-    "test:tape": "postcss-tape"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "dependencies": {
-    "postcss": "^6.0.22"
+    "test": "echo 'Running tests...'; npm run test:js",
+    "test:js": "eslint *.js --cache --ignore-path .gitignore --quiet"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-preset-env": "^1.7.0",
+    "browserify": "^16.2.2",
     "eslint": "^4.19.1",
     "eslint-config-dev": "^2.0.0",
-    "postcss-tape": "^2.2.0",
+    "gzip-size-cli": "^2.1.0",
     "pre-commit": "^1.2.2",
-    "rollup": "^0.60.0",
-    "rollup-plugin-babel": "^3.0.4"
+    "uglify-js": "^3.4.1"
   },
   "eslintConfig": {
     "extends": "dev",
     "parser": "babel-eslint"
   },
   "keywords": [
-    "postcss",
-    "css",
-    "postcss-plugin",
     "dark",
     "mode",
     "modes",

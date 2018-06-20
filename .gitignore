@@ -2,10 +2,8 @@ node_modules
 index.*.js
 package-lock.json
 *.log*
-*.result.css
 .*
+!.babelrc
 !.editorconfig
 !.gitignore
-!.rollup.js
-!.tape.js
 !.travis.yml
