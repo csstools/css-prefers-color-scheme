@@ -33,8 +33,8 @@ The `light` interface would inversely activate the following query:
 ```css
 @media (color-index: 70) {
   body {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
   }
 }
 ```
