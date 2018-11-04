@@ -2,18 +2,16 @@
   "name": "postcss-prefers-interface-codepen",
   "version": "1.0.0",
   "scripts": {
-    "start:browser": "browserify --debug browser.js | babel --source-maps inline --presets=env | uglifyjs --source-map \"content=inline,url='browser.bundle.js.map'\" --compress --output browser.bundle.js; gzip-size browser.bundle.js",
-    "start:codepen": "browserify --debug codepen.js | babel --source-maps inline --presets=env | uglifyjs --source-map \"content=inline,url='codepen.bundle.js.map'\" --compress --output codepen.bundle.js; gzip-size codepen.bundle.js",
-    "start": "npm run start:browser && npm run start:codepen"
-  },
-  "dependencies": {
-    "postcss": "^6.0.23"
+    "start:codepen": "browserify --debug codepen.js | babel --source-maps inline --presets=@babel/env --filename codepen.js | uglifyjs --source-map \"content=inline,url='codepen.bundle.js.map'\" --compress --output codepen.bundle.js; gzip-size codepen.bundle.js",
+    "start": "npm run start:codepen"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "browserify": "^16.2.2",
-    "gzip-size-cli": "^2.1.0",
-    "uglify-js": "^3.4.1"
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "browserify": "^16.2.3",
+    "gzip-size-cli": "^3.0.0",
+    "uglify-js": "^3.4.9"
   },
   "private": true
 }
