@@ -50,7 +50,6 @@
     "babel-eslint": "10.1.0",
     "cross-env": "7.0.3",
     "eslint": "7.32.0",
-    "get-stdin": "7.0.0",
     "postcss": "8.3.6",
     "postcss-tape": "6.0.1",
     "pre-commit": "1.2.2",
