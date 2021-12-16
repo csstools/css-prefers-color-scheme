@@ -4,6 +4,12 @@
 [![Build Status][cli-img]][cli-url]
 [![Support Chat][git-img]][git-url]
 
+⚠️ Prefers Color Scheme was moved to [@csstools/postcss-plugins](https://github.com/csstools/postcss-plugins/tree/main/plugins/css-prefers-color-scheme). ⚠️<br>
+[Read the announcement](https://github.com/csstools/postcss-plugins/discussions/75)
+  
+----------------
+
+
 [Prefers Color Scheme] lets you use light and dark color schemes in all
 browsers, following the [Media Queries] specification.
 
